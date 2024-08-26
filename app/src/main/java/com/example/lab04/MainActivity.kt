@@ -8,6 +8,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.TextFieldValue
@@ -37,7 +38,7 @@ fun MyApp() {
         topBar = {
             TopAppBar(
                 title = { Text("Mi Aplicación") },
-                colors = TopAppBarDefaults.smallTopAppBarColors(containerColor = Color(0xFF6200EE)),
+                colors = TopAppBarDefaults.smallTopAppBarColors(containerColor = Color(0xFF836AA7)),
             )
         }
     ) { paddingValues ->
@@ -64,6 +65,18 @@ fun MyApp() {
                     )
 
                     Spacer(modifier = Modifier.height(8.dp))
+
+                    Button(
+                        onClick = {
+                            if (text.text.isNotEmpty()) {
+                                itemsList.add(text.text)
+                                text = TextFieldValue("") // Clear the field after saving
+                            }
+                        },
+                        modifier = Modifier.align(Alignment.End)
+                    ) {
+                        Text("Guardar")
+                    }
                 }
             }
         }

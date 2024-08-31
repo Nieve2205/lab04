@@ -70,13 +70,28 @@ fun MyApp() {
                         onClick = {
                             if (text.text.isNotEmpty()) {
                                 itemsList.add(text.text)
-                                text = TextFieldValue("") // Clear the field after saving
+                                text = TextFieldValue("")
                             }
                         },
-                        modifier = Modifier.align(Alignment.End)
+                        modifier = Modifier.align(Alignment.End),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color(0xFFA500FF),
+                            contentColor = Color.White,
+                        ),
+                        shape = MaterialTheme.shapes.medium,
+                        elevation = ButtonDefaults.buttonElevation(
+                            defaultElevation = 8.dp,
+                            pressedElevation = 12.dp,
+                        )
                     ) {
-                        Text("Guardar")
+                        Text(
+                            text = "Guardar",
+                            fontSize = 16.sp,
+                            color = Color.White,
+                            letterSpacing = 1.25.sp
+                        )
                     }
+
                 }
             }
         }

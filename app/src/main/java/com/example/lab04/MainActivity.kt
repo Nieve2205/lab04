@@ -47,8 +47,8 @@ fun MyApp() {
                     ) {
                         Text(
                             text = "Mi Aplicación",
-                            fontSize = 22.sp,
-                            color = Color.Black
+                            fontSize = 20.sp,
+                            color = Color.Blue
                         )
                     }
                 },

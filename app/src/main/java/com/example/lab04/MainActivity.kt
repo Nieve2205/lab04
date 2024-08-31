@@ -37,8 +37,19 @@ fun MyApp() {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Mi Aplicación") },
-                colors = TopAppBarDefaults.smallTopAppBarColors(containerColor = Color(0xFF836AA7)),
+                title = {
+                    Box(
+                        modifier = Modifier.fillMaxWidth(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(
+                            text = "Mi Aplicación",
+                            fontSize = 22.sp,
+                            color = Color.Black
+                        )
+                    }
+                },
+                colors = TopAppBarDefaults.smallTopAppBarColors(containerColor = Color(0xFFB394EB)),
             )
         }
     ) { paddingValues ->

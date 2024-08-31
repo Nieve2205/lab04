@@ -70,12 +70,12 @@ fun MyApp() {
                         defaultElevation = 4.dp
                     ),
                     colors = CardDefaults.cardColors(
-                        containerColor = Color.Magenta
+                        containerColor = Color.Gray
                     )
                 ) {
                     Text(
                         text = item,
-                        fontSize = 18.sp,
+                        fontSize = 20.sp,
                         color = Color(0xFF333333),
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier

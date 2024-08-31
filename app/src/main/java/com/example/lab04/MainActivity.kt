@@ -70,7 +70,7 @@ fun MyApp() {
                         defaultElevation = 4.dp
                     ),
                     colors = CardDefaults.cardColors(
-                        containerColor = Color.Gray
+                        containerColor = Color.Magenta
                     )
                 ) {
                     Text(
